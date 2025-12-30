@@ -1,0 +1,591 @@
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* ======================
+   HERO / HEADER
+====================== */
+header.hero {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    background: #000;
+    color: #fff;
+}
+
+/* MOVING IMAGE LAYER */
+.hero-images {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.hero-track {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    will-change: transform;
+    white-space: nowrap;
+}
+
+.hero-track img {
+    width: 420px;
+    height: 560px;
+    object-fit: cover;
+    opacity: 0.85;
+    flex-shrink: 0;
+    border-radius: 6px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.hero-track img:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+/* HERO TEXT OVERLAY */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    font-family: serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+    background: linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    );
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    letter-spacing: -0.03em;
+}
+
+.hero-content p {
+    font-size: 2rem;
+    margin-top: 12px;
+    opacity: 0.9;
+}
+
+.logo-img {
+    width: 120px;
+    height: 120px;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 2rem;
+    margin-top: -2rem;
+}
+
+/* ======================
+   NAVIGATION
+====================== */
+nav {
+    background-color: #003366;
+    text-align: center;
+    padding: 0.75rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    font-weight: 500;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #001f3f;
+    border-radius: 4px;
+}
+
+/* ======================
+   MAIN CONTENT
+====================== */
+/* Remove default padding/margins from main to allow full-width sections */
+main {
+    padding: 0;
+    width: 100%;
+}
+
+/* Utility class to center content within full-width sections */
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Sections are now full-width bands */
+section {
+    padding: 4rem 0;
+    margin: 0;
+}
+
+section h2 {
+    margin-bottom: 2rem;
+    color: #003366;
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+/* Scroll Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ======================
+   MISSION & VISION
+====================== */
+.mission-vision-section {
+    background-color: #ffffff;
+}
+
+.mv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.mv-card {
+    background: #fff;
+    padding: 2.5rem;
+    border-left: 5px solid #003366;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.mv-card h3 {
+    color: #003366;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* ======================
+   CORE VALUES (F.U.R.A.H.A)
+====================== */
+.values-section {
+    text-align: center;
+    background-color: #f4f8fb; /* Light blue/gray background */
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.value-item {
+    background: #3ca8b8;
+    color: white;
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+    background: #004080;
+}
+
+.value-item strong {
+    color: #d4af37; /* Gold accent for the acronym letters */
+    font-size: 1.2em;
+}
+
+/* ======================
+   PROGRAMS
+====================== */
+.programs-section {
+    background-color: #ffffff;
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.program-card {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.program-card h3 {
+    color: #d4af37; /* Gold accent */
+    margin-bottom: 1rem;
+}
+
+.program-card ul {
+    text-align: left;
+    padding-left: 1.2rem;
+    margin-top: 1rem;
+}
+
+.program-card li {
+    margin-bottom: 0.5rem;
+}
+
+/* ======================
+   WHY CHOOSE US
+====================== */
+.why-choose-us {
+    background-color: #003366;
+    color: #fff;
+}
+
+.why-choose-us h2 {
+    color: #d4af37;
+}
+
+.benefits-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.benefits-list li {
+    font-size: 1.05rem;
+}
+
+/* ======================
+   ADMISSION BANNER
+====================== */
+.admission-banner {
+    background: linear-gradient(to right, #003366, #004488);
+    color: #fff;
+    padding: 3rem 0;
+    border-bottom: 5px solid #d4af37;
+}
+
+.banner-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admission-banner h2 {
+    color: #d4af37;
+    margin-bottom: 0.5rem;
+}
+
+.read-more-btn {
+    background-color: #d4af37;
+    color: #003366;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+    white-space: nowrap;
+}
+
+.read-more-btn:hover {
+    background-color: #fff;
+}
+
+/* ======================
+   FOOTER
+====================== */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #003366;
+    color: white;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto 1.5rem auto;
+    padding: 0 1rem;
+}
+
+.footer-info p {
+    margin: 0.5rem 0;
+    opacity: 0.9;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1rem;
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+@media (max-width: 768px) {
+    header.hero {
+        height: 65vh;
+    }
+
+    .hero-track img {
+        width: 260px;
+        height: 360px;
+    }
+
+    nav a {
+        padding: 0.4rem 0.8rem;
+    }
+
+    main {
+        padding: 2rem 1rem;
+    }
+
+    .mission-vision-section {
+        /* grid-template-columns: 1fr;  <-- This was targeting the section, now target the grid class */
+    }
+    
+    .mv-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+}
+
+/* ======================
+   SUB-PAGES STYLES
+====================== */
+.site-header {
+    background-color: #000;
+    color: #fff;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.site-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-title-section {
+    background-color: #f4f8fb;
+    padding: 3rem 0;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* ======================
+   CONTACT FORM
+====================== */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #003366;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.submit-btn {
+    background-color: #003366;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #d4af37;
+    color: #003366;
+}
+
+/* ======================
+   EVENTS LIST
+====================== */
+.event-item {
+    background: #fff;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid #d4af37;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.event-date {
+    background: #003366;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 4px;
+    min-width: 100px;
+}
+
+.event-date .day {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.event-date .month {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.event-details h3 {
+    color: #003366;
+    margin-bottom: 0.5rem;
+}
+
+/* ======================
+   GALLERY PAGE
+====================== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    height: 250px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* ======================
+   BEHANCE STYLE ACTIVITIES
+====================== */
+.behance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.behance-card {
+    background: transparent;
+    margin-bottom: 1rem;
+}
+
+.behance-header {
+    margin-bottom: 1.2rem;
+    border-left: 4px solid #d4af37;
+    padding-left: 1rem;
+}
+
+.behance-header h3 {
+    font-size: 1.6rem;
+    color: #003366;
+    margin-bottom: 0.3rem;
+}
+
+.behance-collage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.behance-img {
+    height: 240px; /* Increased height for bigger images */
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.behance-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.behance-img:hover img {
+    transform: scale(1.08);
+}
+
+@media (max-width: 768px) {
+    .behance-grid {
+        grid-template-columns: 1fr;
+    }
+    .behance-img {
+        height: 180px;
+    }
+}
