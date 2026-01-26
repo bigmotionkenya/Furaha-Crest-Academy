@@ -33,7 +33,7 @@ header.hero {
 .hero-track {
     display: flex;
     flex-wrap: nowrap;
-    gap: 0px;
+    gap: 40px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -362,12 +362,12 @@ footer {
 ====================== */
 @media (max-width: 768px) {
     header.hero {
-        height: 60vh;
+        height: 65vh;
     }
 
     .hero-track img {
         width: 260px;
-        height: 400px;
+        height: 360px;
     }
 
     nav a {
@@ -498,31 +498,7 @@ footer {
     color: #003366;
     margin-bottom: 0.5rem;
 }
-/* Existing styles... */
 
-/* Image Section */
-.image-section {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    margin: 20px 0 0 0; /* Add 20px top margin to avoid overlap with header */
-    padding: 0;
-}
-
-.fitted-image {
-    width: 100%; /* Full width */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 400px; /* Limit height to fit without overlap */
-    object-fit: cover; /* Scales proportionally */
-    display: block;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .fitted-image {
-        max-height: 250px; /* Smaller on mobile */
-    }
-}
 /* ======================
    GALLERY PAGE
 ====================== */
@@ -553,94 +529,61 @@ footer {
 }
 
 /* ======================
-   CO-CURRICULAR ACTIVITIES (ACADEMICS PAGE)
+   BEHANCE STYLE ACTIVITIES
 ====================== */
-.co-curricular-activities {
-    padding: 2rem 0;
-}
-
-.activity-section {
-    margin-bottom: 4rem; /* Space between sections for separation */
-}
-
-.activity-header {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.activity-header h3 {
-    font-size: 1.8rem;
-    color: #2c3e50; /* Professional dark color */
-    margin: 0;
-}
-
-.activity-header p {
-    font-size: 1rem;
-    color: #7f8c8d;
-    margin: 0.5rem 0 0;
-}
-
-/* Activity Gallery: Grid Layout (2x2) */
-.activity-gallery {
+.behance-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 1rem;
-    max-width: 700px; /* Slightly bigger sections */
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 4rem;
+    margin-top: 2rem;
 }
 
-.gallery-item {
-    position: relative;
+.behance-card {
+    background: transparent;
+    margin-bottom: 1rem;
+}
+
+.behance-header {
+    margin-bottom: 1.2rem;
+    border-left: 4px solid #d4af37;
+    padding-left: 1rem;
+}
+
+.behance-header h3 {
+    font-size: 1.6rem;
+    color: #003366;
+    margin-bottom: 0.3rem;
+}
+
+.behance-collage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.behance-img {
+    height: 240px; /* Increased height for bigger images */
+    border-radius: 6px;
     overflow: hidden;
-    border: none; /* No borders */
-    box-shadow: none; /* No shadows */
-    background: none; /* No background */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.gallery-item img {
+.behance-img img {
     width: 100%;
-    height: 200px; /* Fixed height for consistency */
-    object-fit: cover; /* Fully visible, scales without cropping */
-    display: block;
-    border: none; /* Ensure no image borders */
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
-.overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0,0,0,0.7);
-    color: white;
-    text-align: center;
-    padding: 0.5rem;
-    font-size: 0.9rem;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+.behance-img:hover img {
+    transform: scale(1.08);
 }
 
-.gallery-item:hover .overlay {
-    opacity: 1; /* Show overlay on hover */
-}
-
-/* Responsive Design for Activities */
 @media (max-width: 768px) {
-    .activity-gallery {
-        grid-template-columns: 1fr; /* Single column on mobile */
+    .behance-grid {
+        grid-template-columns: 1fr;
     }
-    .gallery-item img {
-        height: 160px; /* Adjusted height on mobile */
+    .behance-img {
+        height: 180px;
     }
-}
-
-.aligned-image {
-    float: left; /* Aligns image to the left, text flows to the right */
-    margin-right: 15px; /* Adds space between the image and the text */
-    width: 150px; /* Adjust the width as needed */
-    height: auto; /* Maintains the aspect ratio */
-}
-.container::after {
-    content: "";
-    clear: both;
-    display: table; /* This "clearfix" ensures the container wraps around the floated elements */
 }

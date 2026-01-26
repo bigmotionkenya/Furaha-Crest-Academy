@@ -1,1 +1,3 @@
-# Furaha-Crest-Academy
+# Furaha Crest Academy
+
+Official website for Furaha Crest Academy.

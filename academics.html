@@ -5,132 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academics - Furaha Crest Academy</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js" defer></script>
-    <!-- Hero Animation -->
     <script src="script.js" defer></script>
-    <style>
-        /* Hero Section Styles */
-        .hero {
-            position: relative;
-            height: 100vh;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero-slider {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-
-        .hero-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .hero-slide.active {
-            opacity: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            color: white;
-            max-width: 800px;
-            padding: 0 20px;
-        }
-
-        .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-        }
-
-        .read-more-btn-container {
-            text-align: center;
-            margin-top: 1rem;
-        }
-
-        .read-more-btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #f39c12;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-
-        .read-more-btn:hover {
-            background-color: #e67e22;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-            .hero-content p {
-                font-size: 1rem;
-            }
-        }
-    </style>
 </head>
 <body>
 
-    <header class="hero">
-        <div class="hero-slider">
-             <div class="hero-images">
-]                <img src="Images/building.jpeg" alt="School campus" />
-                <img src="Images/smile student.jpeg" alt="Classroom activity" />
-                <img src="Images/graduation.jpeg" alt="School events" />
-                <img src="Images/watoto.jpeg" alt="School Logo" />
-                <!-- Duplicates for seamless scrolling -->
-                <img src="Images/building.jpeg" alt="School campus" />
-                <img src="Images/smile student.jpeg" alt="Classroom activity" />
-                <img src="Images/graduation.jpeg" alt="School events" />
-                <img src="Images/watoto.jpeg" alt="School Logo" />
-
-                <img src="Images/building.jpeg" alt="School campus" />
-                <img src="Images/smile student.jpeg" alt="Classroom activity" />
-                <img src="Images/graduation.jpeg" alt="School events" />
-                <img src="Images/watoto.jpeg" alt="School Logo" />
-            <div class="hero-slide active" style="background-image: url('Images/Class\ with\ charts.jpeg');"></div>
-            <div class="hero-slide" style="background-image: url('Images/Students\ Standing\ Swimmingpool.jpeg');"></div>
-            <div class="hero-slide" style="background-image: url('Images/Students\ standing\ on\ pitch.jpeg');"></div>
-
-            <div class="hero-slide" style="background-image: url('Images/graduation.jpeg');"></div>
-            <div class="hero-slide" style="background-image: url('Images/watoto.jpeg');"></div>
-        </div>
-        <div class="hero"> 
-        <div class="hero-images">
-            <div class="hero-content">
-            <h1>FURAHA CREST ACADEMY</h1>
-            <p>Nurturing Excellence. Building Character. Inspiring Futures.</p>
- <div class="read-more-btn-container" style="text-align: center; margin-top: 1rem;">
-            </div>        </div>
-    </header>
-        </div>
+    <header class="site-header">
+        <img src="Images/bg-less-logo.png" alt="Furaha Crest Academy Logo" class="logo-img">
+        <h1>FURAHA CREST ACADEMY</h1>
+        <p>Nurturing Excellence. Building Character. Inspiring Futures.</p>
     </header>
 
     <nav>
@@ -145,16 +27,7 @@
     </nav>
 
     <main>
-      
-        <section class="admission-banner reveal">
-            <div class="container banner-flex" style="justify-content: center;">
-                <h2>Admissions Open for 2026 - Enroll Your Child Today!</h2>
-            </div>
-            <div class="read-more-btn-container" style="text-align: center; margin-top: 1rem;">
-                <a href="contact.html" class="read-more-btn">Get Admission</a>
-            </div>
-        </section>  
-          <section class="page-title-section reveal">
+        <section class="page-title-section reveal">
             <div class="container">
                 <h2>Academic Programs</h2>
                 <p>Competency-Based Education (CBE) tailored for every stage of growth.</p>
@@ -203,119 +76,101 @@
                 </div>
             </div>
         </section>
-        <section class="image-section reveal">
-                <img src="C:\Users\hp\Desktop\Furaha Crest Academy\Images\chess.jpeg" alt="Description of the image" class="fitted-image">
-            </div>
-        </section>
-        
-        <section class="co-curricular-activities">
+
+        <section class="reveal">
             <div class="container">
                 <h2>Co-Curricular Activities</h2>
-                <p style="text-align: center; margin-bottom: 3rem;">We believe in nurturing the whole child. Our students participate in various activities to develop their talents.</p>
+                <p style="text-align: center; margin-bottom: 2rem;">We believe in nurturing the whole child. Our students participate in various activities to develop their talents.</p>
+                
+                <div class="behance-grid">
+                    <!-- Sports -->
+                    <div class="behance-card">
+                        <div class="behance-header">
+                            <h3>⚽ Sports</h3>
+                            <p>Football, Athletics</p>
+                        </div>
+                        <div class="behance-collage">
+                            <div class="behance-img">
+                                <img src="Images/smile student.jpeg" alt="Sports 1">
+                            </div>
+                            <div class="behance-img">
+                                <img src="Images/graduation.jpeg" alt="Sports 2">
+                            </div>
+                            <div class="behance-img">
+                                <img src="Images/building.jpeg" alt="Sports 3">
+                            </div>
+                            <div class="behance-img">
+                                <img src="Images/school logo [Recovered].jpg" alt="Sports 4">
+                            </div>
+                        </div>
+                    </div>
 
-                <!-- Sports Section -->
-                <section class="activity-section">
-                    <div class="activity-header">
-                        <h3>⚽ Sports</h3>
-                        <p>Football, Athletics – Building teamwork and physical fitness.</p>
-                    </div>
-                    <div class="activity-gallery">
-                        <div class="gallery-item">
-                            <img src="Images/smile student.jpeg" alt="Students enjoying sports activities" loading="lazy">
-                            <div class="overlay">Team Spirit</div>
+                    <!-- Music & Drama -->
+                    <div class="behance-card">
+                        <div class="behance-header">
+                            <h3>🎵 Music & Drama</h3>
+                            <p>Choir, Instruments, Drama</p>
                         </div>
-                        <div class="gallery-item">
-                            <img src="Images/graduation.jpeg" alt="Graduation ceremony with sports highlights" loading="lazy">
-                            <div class="overlay">Achievements</div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="Images/building.jpeg" alt="School building during sports events" loading="lazy">
-                            <div class="overlay">Our Campus</div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="Images/school logo [Recovered].jpg" alt="School logo on sports gear" loading="lazy">
-                            <div class="overlay">Pride</div>
+                        <div class="behance-collage">
+                            <div class="behance-img">
+                                <img src="Images/graduation.jpeg" alt="Music 1">
+                            </div>
+                            <div class="behance-img">
+                                <img src="Images/smile student.jpeg" alt="Music 2">
+                            </div>
+                            <div class="behance-img">
+                                <img src="Images/school logo [Recovered].jpg" alt="Music 3">
+                            </div>
+                            <div class="behance-img">
+                                <img src="Images/building.jpeg" alt="Music 4">
+                            </div>
                         </div>
                     </div>
-                </section>
 
-                <!-- Music & Drama Section -->
-                <section class="activity-section">
-                    <div class="activity-header">
-                        <h3>🎵 Music & Drama</h3>
-                        <p>Choir, Instruments, Drama – Fostering creativity and expression.</p>
-                    </div>
-                    <div class="activity-gallery">
-                        <div class="gallery-item">
-                            <img src="Images/graduation.jpeg" alt="Graduation performance" loading="lazy">
-                            <div class="overlay">Performances</div>
+                    <!-- Art & Creative Clubs -->
+                    <div class="behance-card">
+                        <div class="behance-header">
+                            <h3>🎨 Art & Creative Clubs</h3>
+                            <p>Painting, Drawing, Crafts</p>
                         </div>
-                        <div class="gallery-item">
-                            <img src="Images/smile student.jpeg" alt="Smiling student in music class" loading="lazy">
-                            <div class="overlay">Joy of Music</div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="Images/school logo [Recovered].jpg" alt="School logo on drama props" loading="lazy">
-                            <div class="overlay">Our Identity</div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="Images/building.jpeg" alt="Building used for drama rehearsals" loading="lazy">
-                            <div class="overlay">Creative Spaces</div>
+                        <div class="behance-collage">
+                            <div class="behance-img">
+                                <img src="Images/building.jpeg" alt="Art 1">
+                            </div>
+                            <div class="behance-img">
+                                <img src="Images/school logo [Recovered].jpg" alt="Art 2">
+                            </div>
+                            <div class="behance-img">
+                                <img src="Images/smile student.jpeg" alt="Art 3">
+                            </div>
+                            <div class="behance-img">
+                                <img src="Images/graduation.jpeg" alt="Art 4">
+                            </div>
                         </div>
                     </div>
-                </section>
 
-                <!-- Art & Creative Clubs Section -->
-                <section class="activity-section">
-                    <div class="activity-header">
-                        <h3>🎨 Art & Creative Clubs</h3>
-                        <p>Painting, Drawing, Crafts – Encouraging imagination and skill.</p>
-                    </div>
-                    <div class="activity-gallery">
-                        <div class="gallery-item">
-                            <img src="Images/building.jpeg" alt="Art studio in the building" loading="lazy">
-                            <div class="overlay">Inspiration</div>
+                    <!-- Chess & Scouting -->
+                    <div class="behance-card">
+                        <div class="behance-header">
+                            <h3>♟️ Chess & Scouting</h3>
+                            <p>Strategy, Outdoor Skills</p>
                         </div>
-                        <div class="gallery-item">
-                            <img src="Images/school logo [Recovered].jpg" alt="Logo in art projects" loading="lazy">
-                            <div class="overlay">Creativity</div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="Images/smile student.jpeg" alt="Student creating art" loading="lazy">
-                            <div class="overlay">Talent</div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="Images/graduation.jpeg" alt="Art displayed at graduation" loading="lazy">
-                            <div class="overlay">Showcase</div>
+                        <div class="behance-collage">
+                            <div class="behance-img">
+                                <img src="Images/school logo [Recovered].jpg" alt="Chess 1">
+                            </div>
+                            <div class="behance-img">
+                                <img src="Images/building.jpeg" alt="Chess 2">
+                            </div>
+                            <div class="behance-img">
+                                <img src="Images/graduation.jpeg" alt="Chess 3">
+                            </div>
+                            <div class="behance-img">
+                                <img src="Images/smile student.jpeg" alt="Chess 4">
+                            </div>
                         </div>
                     </div>
-                </section>
-
-                <!-- Chess & Scouting Section -->
-                <section class="activity-section">
-                    <div class="activity-header">
-                        <h3>♟️ Chess & Scouting</h3>
-                        <p>Strategy, Outdoor Skills – Developing logic and adventure.</p>
-                    </div>
-                    <div class="activity-gallery">
-                        <div class="gallery-item">
-                            <img src="Images/school logo [Recovered].jpg" alt="Logo on chess boards" loading="lazy">
-                            <div class="overlay">Strategy</div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="Images/building.jpeg" alt="Building for indoor activities" loading="lazy">
-                            <div class="overlay">Focus</div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="Images/graduation.jpeg" alt="Achievements in scouting" loading="lazy">
-                            <div class="overlay">Milestones</div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="Images/smile student.jpeg" alt="Happy student in scouting" loading="lazy">
-                            <div class="overlay">Adventure</div>
-                        </div>
-                    </div>
-                </section>
+                </div>
             </div>
         </section>
 
@@ -329,29 +184,6 @@
     <footer>
         <p class="copyright">&copy; 2025 Furaha Crest Academy. All rights reserved.</p>
     </footer>
-
-    <script>
-        // Hero Slider Functionality
-        const slides = document.querySelectorAll('.hero-slide');
-        let currentSlide = 0;
-
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === index);
-            });
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        // Auto-change slides every 5 seconds
-        setInterval(nextSlide, 5000);
-
-        // Initial display
-        showSlide(currentSlide);
-    </script>
 
 </body>
 </html>
