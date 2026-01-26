@@ -53,3 +53,14 @@ footer {
     bottom: 0;
     width: 100%;
 }
+.aligned-image {
+    float: left; /* Aligns image to the left, text flows to the right */
+    margin-right: 15px; /* Adds space between the image and the text */
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintains the aspect ratio */
+}
+.container::after {
+    content: "";
+    clear: both;
+    display: table; /* This "clearfix" ensures the container wraps around the floated elements */
+}
